@@ -1,0 +1,10 @@
+{
+  "codeowners": ["@knorr3"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "TODO",
+  "domain": "corona_germany",
+  "name": "Coronavirus Deutschland",
+  "requirements": [],
+  "version": "1.0.0"
+}

@@ -1,0 +1,23 @@
+{
+  "config": {
+    "error": {
+      "wrong_format" : "Please use 'SK <district>' or 'LK <district>'",
+      "berlin" : "For Berlin please consult the documentation"
+    },
+    "step": {
+      "user": {
+        "data": {
+          "county": "Your district"
+        },
+        "description": "Enter your district, e.g. LK München oder SK München.",
+        "title": "Setup"
+      }
+    }
+  },
+  "options": {
+    "error": {
+      "wrong_format" : "Please use 'SK <district>' or 'LK <district>'",
+      "berlin" : "For Berlin please consult the documentation"
+    }
+  }
+}
