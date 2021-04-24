@@ -2,7 +2,7 @@
 
 **Documentation is comming soon!**
 
-<img src="https://i.imgur.com/2GQ6LWy.png" alt="Coronavirus Sensor" width="200px">
+<img src="https://i.imgur.com/2GQ6LWy.png" alt="Coronavirus Sensor" width="300px">
 
 Huge thanks to `@boralyl` for the project structure!
 
