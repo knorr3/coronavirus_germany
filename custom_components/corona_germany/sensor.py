@@ -114,7 +114,7 @@ class CoronaSensor(Entity):
                 self.attrs[ATTR_DEATHS] = json_data['features'][0]['attributes']['deaths'],
                 self.attrs[ATTR_CASES] = json_data['features'][0]['attributes']['cases']
 
-                self._state = self.attrs[ATTR_INCIDENCE]
+                self._state = round(float(json_data['features'][0]['attributes']['cases7_per_100k']),2)
                 self._available = True
         except:
             self._available = False
