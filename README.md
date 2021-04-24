@@ -2,7 +2,7 @@
 
 **Documentation is comming soon!**
 
-![Coronavirus Sensor](https://imgur.com/2GQ6LWy)
+![Coronavirus Sensor](https://i.imgur.com/2GQ6LWy.png)
 
 Huge thanks to `@boralyl` for the project structure!
 
