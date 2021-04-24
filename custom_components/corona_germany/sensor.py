@@ -71,7 +71,7 @@ class CoronaSensor(Entity):
         self.county = county
         self.hass = hass
         self.attrs: Dict[str, Any] = {CONF_COUNTY: self.county}
-        self._name = county
+        self._name = f"Coronavirus {county}"
         self._state = None
         self._available = True
 
@@ -91,8 +91,15 @@ class CoronaSensor(Entity):
         return self._available
 
     @property
+    def icon(self) -> str:
+        return "mdi:biohazard"
+
+    @property
     def state(self) -> Optional[str]:
-        return self._state
+        if self._state is not None:
+            return self._state
+        else:
+            return "Error"
 
     @property
     def device_state_attributes(self) -> Dict[str, Any]:
@@ -110,11 +117,13 @@ class CoronaSensor(Entity):
 
                 json_data = json.loads(raw_html)
             
-                self.attrs[ATTR_INCIDENCE] = json_data['features'][0]['attributes']['cases7_per_100k'],
+                incidenceTemp = str(round(float(json_data['features'][0]['attributes']['cases7_per_100k']),2)).replace('.',',')
+
+                self.attrs[ATTR_INCIDENCE] = incidenceTemp
                 self.attrs[ATTR_DEATHS] = json_data['features'][0]['attributes']['deaths'],
                 self.attrs[ATTR_CASES] = json_data['features'][0]['attributes']['cases']
 
-                self._state = round(float(json_data['features'][0]['attributes']['cases7_per_100k']),2)
+                self._state = incidenceTemp
                 self._available = True
         except:
             self._available = False
