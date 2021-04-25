@@ -1,6 +1,6 @@
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs)
-# Corona Germany Homeassistant Sensor
-Gets the latest corona stats from the RKI API integration.
+# Coronavirus Germany Homeassistant Sensor
+Gets the latest corona stats from the RKI API.
 
 <img src="https://i.imgur.com/2GQ6LWy.png" alt="Coronavirus Sensor" width="300px">
 
@@ -14,7 +14,7 @@ https://github.com/knorr3/coronavirus_germany
 
 as custom repository URL.
 
-Then install the "Corona Germany" integration.
+Then install the "Coronavirus Deutschland" integration.
 
 If you use this method, your component will always update to the latest version.
 
@@ -31,6 +31,8 @@ where `<config>` is your Home Assistant configuration directory.
 >__NOTE__: Do not download the file by using the link above directly. Rather, click on it, then on the page that comes up use the `Raw` button.
 
 ## Configuration 
+
+Go to Configuration -> Integrations and click on "add integration". Then search for Coronavirus Deutschland
 
 ### Configuration Variables
 - **entity_id**: Choose your location 
