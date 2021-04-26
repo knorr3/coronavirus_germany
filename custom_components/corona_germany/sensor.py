@@ -83,7 +83,7 @@ class CoronaSensor(Entity):
     @property
     def unique_id(self) -> str:
         """Return the unique ID of the sensor."""
-        return self.county
+        return self._name
 
     @property
     def available(self) -> bool:
