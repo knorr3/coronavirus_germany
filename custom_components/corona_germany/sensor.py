@@ -117,7 +117,7 @@ class CoronaSensor(Entity):
 
                 json_data = json.loads(raw_html)
             
-                incidenceTemp = str(round(float(json_data['features'][0]['attributes']['cases7_per_100k']),2)).replace('.',',')
+                incidenceTemp = float(round(float(json_data['features'][0]['attributes']['cases7_per_100k']),2))
 
                 self.attrs[ATTR_INCIDENCE] = incidenceTemp
                 self.attrs[ATTR_DEATHS] = json_data['features'][0]['attributes']['deaths'],
